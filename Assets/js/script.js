@@ -1,8 +1,10 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var currentDayEl = document.getElementById('currentDay');
-var timeBlockArray = document.querySelectorAll('.time-block');
+var currentDayEl = $('#currentDay')
+var timeBlockArray = $('.time-block')
+
+
 
 
 $(function () {
@@ -39,40 +41,19 @@ $(function () {
         else if(timeBlockHour < hour){
           $(this).removeClass('present future').addClass('past');
         }
-       })
+       });
        
 }
   
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
+  // attribute of each time-block be used to do this?+
   //
   // TODO: Add code to display the current date in the header of the page.
-  var date = dayjs().format('MMMM D, YYYY');
+  var date = dayjs().format('dddd, MMMM D, YYYY');
   console.log(date);
-  var weekday = dayjs().day();
-    if(weekday === 0){
-      currentDayEl.textContent = 'Scheduling for: Sunday, ' + date;
-    }
-    else if(weekday === 1){
-      currentDayEl.textContent = 'Scheduling for: Monday, ' + date;
-    }
-    else if(weekday === 2){
-      currentDayEl.textContent = 'Scheduling for: Tuesday, ' + date;
-    }
-    else if(weekday === 3){
-      currentDayEl.textContent = 'Scheduling for: Wednesday, ' + date;
-    }
-    else if(weekday === 4){
-      currentDayEl.textContent = 'Scheduling for: Thursday, ' + date;
-    }
-    else if(weekday === 5){
-      currentDayEl.textContent = 'Scheduling for: Friday, ' + date;
-    }
-    else if(weekday === 6){
-      currentDayEl.textContent = 'Scheduling for: Saturday, ' + date;
-    }
+  currentDayEl.text('Scheduling for: ' + date);
 
   timeBlockColorCode();
 
