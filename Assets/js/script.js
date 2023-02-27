@@ -56,10 +56,7 @@ $(function () {
       .attr('id'))
       );
   })
-    
-
-  //
-  // TODO: Add code to display the current date in the header of the page.
+// Displays current date to page
   var date = dayjs().format('dddd, MMMM D, YYYY');
   console.log(date);
   currentDayEl.text('Scheduling for: ' + date);
