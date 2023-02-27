@@ -7,7 +7,7 @@ This website can be used as a simple daily planner to schedule out your work day
 Working on this website helped be get more familiar with the use of third party API's like JQuery and Day.Js. I also got some additional practice storing and pulling information from local storage. I had to make use of dot notation to chain methods more than I ever have in past projects which helped me get more comfortable navigation longer lines of code. 
 
 ## Installation
-  
+
 N/A
 
 ## Usage
